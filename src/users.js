@@ -102,7 +102,7 @@ exports.getUsers = (req, res) => {
       res.send({
         success: true,
         message: "users returned",
-        users,
+        users, //same as saying users:users
       });
     })
     .catch((err) =>
