@@ -1,3 +1,4 @@
+const jwt = require("jsonwebtoken");
 const { connectDb } = require("./dbConnect");
 
 exports.createUser = (req, res) => {

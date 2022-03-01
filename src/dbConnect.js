@@ -7,6 +7,6 @@ exports.connectDb = () => {
     initializeApp({
       credential: cert(credentials),
     });
-    return getFirestore();
   }
+  return getFirestore();
 };

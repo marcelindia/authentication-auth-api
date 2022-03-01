@@ -1,7 +1,6 @@
 const express = require("express");
 const cors = require("cors");
 const { createUser, loginUser, getUsers } = require("./src/users");
-
 const PORT = process.env.PORT || 3001;
 
 const app = express();
