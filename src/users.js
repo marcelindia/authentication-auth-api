@@ -101,6 +101,12 @@ exports.getUsers = (req, res) => {
   //TODO protect route with JWT
   const decode = jwt.verify(req.headers.authorization, "doNotShareYourSecret");
   console.log("NEW REQUEST BY:", decode.email);
+  if (decode.userRole > 5) {
+    return res.status(401).send({
+      success: false,
+      message: "Not authorized",
+    });
+  }
   const db = connectDb();
   db.collection("users")
     .get()
